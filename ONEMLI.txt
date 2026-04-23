@@ -1,0 +1,87 @@
+╔════════════════════════════════════════════════════════════════╗
+║                                                                ║
+║          TELEGRAM ZAMANLANMIŞ MESAJ GÖNDERİCİ                 ║
+║                                                                ║
+╚════════════════════════════════════════════════════════════════╝
+
+🚨 BACKEND SERVER'I BAŞLATMAYI UNUTMAYIN! 🚨
+
+┌────────────────────────────────────────────────────────────────┐
+│ HIZLI BAŞLATMA (2 Adım)                                       │
+└────────────────────────────────────────────────────────────────┘
+
+ADIM 1: Backend Başlat
+  Terminal 1:
+    cd server
+    npm install
+    npm start
+
+ADIM 2: Frontend Başlat
+  Terminal 2:
+    npm install
+    npm run dev
+
+ADIM 3: Tarayıcıda Aç
+  http://localhost:5173
+
+✅ Üstte "🟢 Server Aktif" yazıyorsa başarılı!
+❌ "Backend server'a bağlanılamıyor" yazıyorsa Adım 1'i kontrol et!
+
+┌────────────────────────────────────────────────────────────────┐
+│ DOKÜMANTASYON                                                  │
+└────────────────────────────────────────────────────────────────┘
+
+📖 BASLAT.md        → Nasıl başlatılır? (Detaylı)
+📖 START_HERE.md    → İlk başlangıç rehberi
+📖 KULLANIM.md      → Nasıl kullanılır?
+📖 SETUP.md         → Production deployment
+📖 README.md        → Genel bilgiler
+
+┌────────────────────────────────────────────────────────────────┐
+│ SORUN GİDERME                                                  │
+└────────────────────────────────────────────────────────────────┘
+
+❌ "Backend server'a bağlanılamıyor"
+   → cd server && npm start komutuyla backend'i başlat
+   → curl http://localhost:3001/api/health ile kontrol et
+
+❌ "Port already in use"
+   → lsof -ti:3001 | xargs kill -9 (Mac/Linux)
+   → Task Manager'dan 3001 portunu kullanan uygulamayı kapat
+
+❌ "npm: command not found"
+   → Node.js kur: https://nodejs.org
+
+❌ "Bağlantıyı test et" çalışmıyor
+   → Backend çalışıyor mu kontrol et
+   → Bot token doğru mu?
+   → Bota /start gönderdin mi?
+
+┌────────────────────────────────────────────────────────────────┐
+│ ÖNEMLI NOTLAR                                                  │
+└────────────────────────────────────────────────────────────────┘
+
+✅ Backend VARSA:
+   - Mesajlar veritabanında saklanır
+   - Sayfa kapalı olsa bile mesajlar gönderilir
+   - Her dakika otomatik kontrol
+   - Production için ideal
+
+⚠️ Backend YOKSA:
+   - LocalStorage kullanılır
+   - Sayfa açık kalmalı
+   - Her 10 saniye kontrol
+   - Sadece test için
+
+┌────────────────────────────────────────────────────────────────┐
+│ İLETİŞİM                                                       │
+└────────────────────────────────────────────────────────────────┘
+
+Sorun mu var?
+1. Console'u aç (F12)
+2. Hata mesajını oku
+3. BASLAT.md dosyasına bak
+4. Google'da ara
+
+İyi kullanımlar! 🚀
+
